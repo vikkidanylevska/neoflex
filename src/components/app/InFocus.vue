@@ -55,6 +55,7 @@
 <style lang="scss" scoped>
 
 	.in-focus {
+		display: none;
 		font-family: 'Museo Sans Cyrl', Arial, sans-serif;
 		display: flex;
 		-ms-align-items: center;
@@ -64,9 +65,7 @@
 		-ms-flex-direction: column;
 		-o-flex-direction: column;
 		flex-direction: column;
-		position: absolute;
-		/* transform: translateY(-220px); */
-		top: 280px;
+		margin-top: -180px;
 		width: 100%;
 
 		&__title {
@@ -74,17 +73,24 @@
 			font-weight: 900;
 			text-align: center;
 			margin-bottom: 25px;
-			background: linear-gradient(90deg, #FF6B00 0%, #FF007A 100%);
+			background: -webkit-linear-gradient(left, #FF6B00 0%, #FF007A 100%);
+			background: -o-linear-gradient(left, #FF6B00 0%, #FF007A 100%);
+			background: linear-gradient(to right, #FF6B00 0%, #FF007A 100%);
 			-webkit-background-clip: text;
 			-moz-background-clip: text;
 			background-clip: text;
-			-webkit-text-fill-color: transparent;
+			position: relative;
+			z-index: 5;
+			color: transparent;
 		}
 
 		&__cards {
 			display: flex;
-		flex-direction: column;
-		justify-content: center;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			z-index: 5;
+
 		}
 
 		&__card {
@@ -145,6 +151,10 @@
 	}
 
 	@media all and (min-width: 992px) {
+
+		.in-focus {
+			position: static;
+		}
 
 		.in-focus__link {
 			display: none;

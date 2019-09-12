@@ -12,7 +12,7 @@
 
 	.first-screen {
 		height: 100vh;
-		min-height: 500px;
+		/* min-height: 400px; */
 		background: linear-gradient(180deg, #1A024F 0%, #570066 100%);
 		opacity: .9;
 		position: relative;

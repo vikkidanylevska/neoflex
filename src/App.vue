@@ -4,6 +4,9 @@
    <FirstScreen/>
    <InFocus/>
    <WhyNeoflex/>
+   <CreateIT/>
+   <Advantage/>
+   <PressCenter/>
   </div>
 </template>
 
@@ -12,6 +15,9 @@ import Navbar from './components/app/Navbar.vue'
 import FirstScreen from './components/app/FirstScreen.vue'
 import InFocus from './components/app/InFocus.vue'
 import WhyNeoflex from './components/app/WhyNeoflex.vue'
+import CreateIT from './components/app/CreateIT.vue'
+import Advantage from './components/app/Advantage.vue'
+import PressCenter from './components/app/PressCenter.vue'
 
 export default {
   name: 'app',
@@ -19,7 +25,10 @@ export default {
     Navbar,
     FirstScreen,
     InFocus,
-    WhyNeoflex
+    WhyNeoflex,
+    CreateIT,
+    Advantage,
+    PressCenter
   }
 }
 </script>

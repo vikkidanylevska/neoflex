@@ -1,9 +1,13 @@
 <template>
-	<section class="why-neoflex">
-		<h2 class="why-neoflex__title">Почему &laquoНеофлекс&raquo?</h2>
+	<section class="press-center">
+		<h2>
+			<a href="#" class="press-center__title">Пресс-центр</a>
+		</h2>
 
-			
-		<div class="why-neoflex__circle"></div>
+		<div class="news-wrapper">
+			<a href="#" class="press-center__news">Новости</a>
+			<a href="#" class="press-center__publications">Публикации</a>
+		</div>
 
 	</section>
 </template>
@@ -18,22 +22,19 @@
 
 <style lang="scss" scoped>
 
-	.why-neoflex {
-		background: #fff;
-		width: 100%;
+	.press-center__title h2{
+		text-decoration: underline;
+	}
+
+	.press-center {
+		padding-top: 80px;
 		display: flex;
-		-webkit-flex-direction: column;
-		-moz-flex-direction: column;
-		-ms-flex-direction: column;
-		-o-flex-direction: column;
 		flex-direction: column;
-		justify-content: center;
 		-ms-align-items: center;
 		align-items: center;
-		overflow: hidden;
-		padding: 40px 25px 0;
 
 		&__title {
+			display: inline-block;
 			font-size: 22px;
 			font-weight: 900;
 			text-align: center;
@@ -45,10 +46,10 @@
 			-moz-background-clip: text;
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
+			border-bottom: 2px solid transparent;
 
-			& > * {
-				font-size: 50px;
-				quotes: "\00ab" "\00bb";
+			&:hover {
+				border-bottom: 2px solid #570066;
 			}
 		}
 
@@ -62,15 +63,14 @@
 			overflow: hidden;
 			margin: 0 -40px;
 		}
+
+		
 	}
 
 	@media all and (min-width: 992px) {
+
 		.why-neoflex {
 
-
-			&__circle {
-				display: none;
-			}
 		}
 
 	}
@@ -81,8 +81,8 @@
 		.why-neoflex {
 
 			&__title {
-				font-size: 45px;
-				margin-bottom: 25px;
+			font-size: 45px;
+			margin-bottom: 25px;
 			}
 		}
 
