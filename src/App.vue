@@ -7,6 +7,7 @@
    <CreateIT/>
    <Advantage/>
    <PressCenter/>
+   <Career/>
   </div>
 </template>
 
@@ -18,6 +19,8 @@ import WhyNeoflex from './components/app/WhyNeoflex.vue'
 import CreateIT from './components/app/CreateIT.vue'
 import Advantage from './components/app/Advantage.vue'
 import PressCenter from './components/app/PressCenter.vue'
+import Career from './components/app/Career.vue'
+
 
 export default {
   name: 'app',
@@ -28,7 +31,8 @@ export default {
     WhyNeoflex,
     CreateIT,
     Advantage,
-    PressCenter
+    PressCenter,
+    Career
   }
 }
 </script>

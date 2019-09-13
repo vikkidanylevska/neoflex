@@ -13,14 +13,16 @@
 	.first-screen {
 		height: 100vh;
 		/* min-height: 400px; */
-		background: linear-gradient(180deg, #1A024F 0%, #570066 100%);
+		background: -webkit-linear-gradient(#1A024F 0%, #570066 100%);
+		background: -o-linear-gradient(#1A024F 0%, #570066 100%);
+		background: linear-gradient(#1A024F 0%, #570066 100%);
 		opacity: .9;
 		position: relative;
 		z-index: 0;
 		display: flex;
 		justify-content: center;
 		padding-top: 165px;
-
+	
 		&::before{
 			content: " ";
 			position: absolute;
@@ -32,10 +34,10 @@
 		    background: #0C0519;
 		    opacity: .9;
 		}
-
+	
 		& > * {
 			position: relative;
-        	z-index: 5;
+	        	z-index: 5;
 		}
 	}
 

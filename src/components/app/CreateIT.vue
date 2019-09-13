@@ -60,6 +60,7 @@
 			font-size: 22px;
 			font-weight: 900;
 			text-align: center;
+			line-height: 1.2;
 			margin-bottom: 25px;
 			background: -webkit-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
 			background: -o-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
@@ -68,16 +69,18 @@
 			-moz-background-clip: text;
 			background-clip: text;
 			color: transparent;
-			padding: 0 25px;
-			margin-bottom: 8px;
+			width: 100%;
+			margin: 0 auto 8px;
 		}
 
 		&__text {
 			font-size: 16px;
 			font-weight: 500;
+			line-height: 1.3;
 			text-align: center;
-			padding: 0 35px;
-			margin-bottom: 30px;
+			margin: 0 auto 30px;
+			width: 100%;
+			max-width: 300px;
 		}
 
 		&__slider {
@@ -111,6 +114,21 @@
 	}
 
 	@media all and (min-width: 991px) {
+
+		.creat-it {
+			padding-top: 80px;
+
+			&__title {
+				font-size: 45px;
+				max-width: 900px;
+				margin: 0 auto 25px;
+			}
+
+			&__text {
+				font-size: 28px;
+				max-width: 950px;
+				margin: 0 auto 25px;
+			}
 
 		.prev, .next {
 			display: block;
@@ -147,5 +165,6 @@
 		}
 	}
 
+}
 
 </style>

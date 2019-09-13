@@ -2,7 +2,7 @@
 	<section class="advantage">
 		<h2 class="advantage__title">Почему мы делаем быстро и качественно?</h2>
 
-		<carousel :nav="false" :items="1" :responsive="{991:{items:4}}" class="advantage__slider">
+		<carousel :nav="false" :items="1" class="advantage__slider">
 
    			<template slot="prev">
    				<span class="prev">
@@ -12,17 +12,19 @@
    				</span>
    			</template>
 
-			    <div class="advantage__img">
-			    	<img src="@/assets/img/advantage-slide1.jpg">
-			    	<p class="advantage__descr">Понимаем бизнес-процессы и обладаем глубокой технологической кспертизой</p>
+			    <div class="advantage__img-wrapper">
+			    	<div class="advantage__img"></div>
+			    	<p class="advantage__descr">Понимаем бизнес-процессы и обладаем глубокой технологической экспертизой</p>
 			    </div>
 
-			    <div class="advantage__img">
-			    	<img src="@/assets/img/advantage-slide1.jpg">
+			    <div class="advantage__img-wrapper">
+			    	<div class="advantage__img"></div>
+			    	<p class="advantage__descr">Понимаем бизнес-процессы и обладаем глубокой технологической экспертизой</p>
 			    </div>
 
-			    <div class="advantage__img">
-			    	<img src="@/assets/img/advantage-slide1.jpg">
+			    <div class="advantage__img-wrapper">
+			    	<div class="advantage__img"></div>
+			    	<p class="advantage__descr">Понимаем бизнес-процессы и обладаем глубокой технологической экспертизой</p>
 			    </div>
 
   			<template slot="next">
@@ -56,10 +58,12 @@
 		padding-top: 85px;
 
 		&__title {
+			display: block;
 			font-size: 22px;
 			font-weight: 900;
+			line-height: 1.2;
 			text-align: center;
-			margin-bottom: 25px;
+			width: 100%;
 			background: -webkit-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
 			background: -o-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
 			background: linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
@@ -77,6 +81,7 @@
 			font-size: 22px;
 			font-weight: 900;
 			color: #fff;
+			line-height: 1.3;
 			text-align: left;
 			position: absolute;
 			top: 112px;
@@ -89,10 +94,11 @@
 			margin-bottom: 30px;
 		}
 
-		&__img {
-			position: relative;
+		&__img-wrapper {
 
-			&::after {
+			/* position: relative; */
+
+			/* &::after {
 				content: " ";
 				position: absolute;
 			    top: 0;
@@ -100,9 +106,16 @@
 			    bottom: 0;
 			    left: 0;
 			    z-index: 1;
-			    background: linear-gradient(213.84deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    background: -webkit-linear-gradient(354deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    background: -o-linear-gradient(354deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    background: linear-gradient(84deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
 			    opacity: .7;
-			}
+			} */
+		}
+
+		&__img {
+			height: 400px;
+			background: #150F1E url("../../assets/img/advantage-slide2.jpg") no-repeat;
 		}
 
 		&__button {
@@ -160,10 +173,129 @@
 		.next {
 			right: 40px;
 		}
-
-
-
 	}
+
+	@media all and (min-width: 991px) {
+
+		.advantage {
+			padding-top: 100px;
+
+		&__title {
+			font-size: 45px;
+			max-width: 750px;
+			padding: 0;
+			margin: 0 auto 25px;
+		}
+
+		&__descr {
+			width: 100%;
+			max-width: 320px;
+			font-size: 22px;
+			font-weight: 900;
+			color: #fff;
+			line-height: 1.3;
+			text-align: left;
+			position: absolute;
+			top: 112px;
+			left: 24px;
+			z-index: 2;
+		}
+
+		&__slider {
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+		&__img-wrapper {
+			/* position: relative; */
+			background-color: #150F1E;
+			-webkit-background-size: cover;
+			background-size: cover;
+			width: 100%;
+			height: 700px;
+			display: flex;
+			justify-content: flex-end;
+
+			/* &::after {
+				content: " ";
+				position: absolute;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    z-index: 1;
+			    background: -webkit-linear-gradient(354deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    background: -o-linear-gradient(354deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    background: linear-gradient(84deg, #1A024F 9.76%, #570066 68.02%), #3C143D;
+			    opacity: .7;
+			} */
+
+
+			}
+
+		&__img {
+			width: 50%;
+			height: 700px;
+		}
+
+		&__button {
+			display: block;
+			width: 100%;
+			max-width: 250px;
+			padding: 15px 0;
+			border: 2px solid #1A024F;
+			border-radius: 70px;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+			color: transparent;
+			background: -webkit-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
+			background: -o-linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
+			background: linear-gradient(180deg, #1A024F 0%, #570066 100%), #3C143D;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			margin: 0 auto;
+		}
+
+		.prev, .next {
+			display: block;
+			position: absolute;
+			bottom: 60px;
+			z-index: 5;
+			width: 37px;
+			height: 37px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			background: transparent;
+
+			& > svg {
+				position: absolute;
+				top: 22%;
+				left: 19%;
+				width: 23px;
+				height: 20px;
+				-webkit-background-size: contain;
+				background-size: contain;
+			}
+
+			&:hover, &:hover > svg path {
+				border: 1px solid #F2584A;
+				fill: #F2584A;
+			}
+		}
+
+		.prev {
+			left: 40px;
+			transform: rotate(180deg);
+		}
+
+		.next {
+			right: 40px;
+		}
+	}
+
+}
 
 
 </style>
